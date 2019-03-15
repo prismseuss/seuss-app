@@ -1,0 +1,25 @@
+# You can automatically load this file using direnv: https://direnv.net/
+# or just `source .envrc`
+
+# Space-separated list of one or more required network ids
+export REACT_APP_ALLOWED_NETWORK_IDS="1234 3"
+
+# If an Ethereum provider is not available, then default to the following network name.
+# This name is passed to ethers.js getDefaultProvider()
+# See https://docs.ethers.io/ethers.js/html/api-providers.html#connecting-to-ethereum
+export REACT_APP_DEFAULT_NETWORK_NAME=ropsten
+
+# Configures the Sentry DSN
+# export REACT_APP_SENTRY_DSN=<your sentry dsn>
+
+# Configures the Mixpanel app id
+# export REACT_APP_MIXPANEL_ID=<your mixpanel id>
+
+# Configures the Google Analytics tracking ID
+# export REACT_APP_GA_TRACKING_ID=<your ga tracking id>
+
+# Configures the Intercom API Key
+# export REACT_APP_INTERCOM_APP_ID=<your intercom app id>
+
+# Configures the block from which to retrieve events on mainnet.  Helps optimize queries.
+export REACT_APP_MAINNET_STARTING_BLOCK=7280000

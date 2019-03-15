@@ -1,0 +1,242 @@
+::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+::selection {
+  background-color: lighten($info, 20%);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: $hr-width;
+}
+
+.has-text-primary {
+  color: $link !important;
+}
+
+a.has-text-primary:hover,
+a.has-text-primary:focus {
+  color: $link-hover !important;
+}
+
+a.is-dark {
+  color: $text;
+}
+
+.is-monospaced {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+
+  font-family: $code-family;
+  letter-spacing: 0.05rem;
+}
+
+.is-borderless {
+  border: 0;
+}
+
+// This is used by the page / layout transitions
+.is-positioned-absolutely {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.section--main-content {
+  min-height: 600px;
+}
+
+// This is used by the page / layout transitions
+.is-full-width {
+  width: 100%;
+}
+
+.button-has-icon .has-text-link {
+  margin-left: 0.5rem;
+}
+
+.has-text-link,
+.has-hover-border {
+  border-bottom: 1px solid transparent;
+  transition: all 200ms ease-in-out;
+}
+
+.has-hover-border:hover {
+  border-bottom-color: rgba(5, 110, 220, 0.5);
+}
+
+.button-has-icon {
+  border: 0;
+}
+
+@media screen and (max-width: $tablet) {
+  .reverse-column-order {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.icon-small {
+  height: 16px;
+  width: 16px;
+}
+
+.has-text-right--desktop {
+  @media screen and (min-width: $desktopMin) {
+    text-align: right;
+  }
+}
+
+.is-size-4 {
+  @media screen and (max-width: $desktop) {
+    font-size: 1.25rem !important;
+    line-height: 1.325;
+  }
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.no-scale:hover {
+  transform: scale3d(1, 1, 1) !important;
+}
+
+.has-text-white a,
+.has-text-white button,
+.has-text-black a,
+.has-text-black button,
+.has-text-light a,
+.has-text-light button,
+.has-text-dark a,
+.has-text-dark button,
+.has-text-primary a,
+.has-text-primary button,
+.has-text-link a,
+.has-text-link button,
+.has-text-info a,
+.has-text-info button,
+.has-text-success a,
+.has-text-success button,
+.has-text-warning a,
+.has-text-warning button,
+.has-text-grey-darker a,
+.has-text-grey-darker button,
+.has-text-grey-dark a,
+.has-text-grey-dark button,
+.has-text-grey a,
+.has-text-grey button,
+.has-text-grey-light a,
+.has-text-grey-light button,
+.has-text-grey-lighter a
+.has-text-grey-lighter button,{
+  color: inherit;
+}
+
+.tag:not(body) {
+  font-family: $code-family;
+  font-size: 0.625rem;
+  font-weight: 900;
+  height: 1.25rem;
+}
+
+.tag.has-arrow-left {
+  position: relative;
+}
+
+.tag.has-arrow-left::before {
+  content: "";
+
+  border-radius: 40px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid $info;
+  width: 10px;
+  height: 100%;
+  position: absolute;
+  left: -8px;
+}
+
+.has-half-margin {
+  margin-bottom: 0.5rem !important;
+}
+
+.help {
+  font-size: 1rem;
+}
+
+.has-break-word {
+  overflow-wrap: break-word;
+}
+
+.export-icon {
+  color: lighten($link, 30%);
+  font-size: 12px;
+  position: relative;
+  top: -2px;
+  transition: all 300ms ease-in-out;
+}
+
+a:hover .export-icon {
+  color: $link-hover;
+  font-size: 16px;
+  top: 0;
+}
+
+// Hack to force hide Intercom, the settings are not working, nor is the JS code to hide it
+// Make sure to turn the sound effects off in the Intercom settings as well!
+// .intercom-namespace {
+//   display: none;
+// }
+
+.pane {
+  background-color: #fff;
+  border-radius: 6px;
+  // box-shadow: 0 10px 10px -5px rgba(10, 10, 10, .05);
+  box-shadow: 0 8px 30px 5px rgba(40, 50, 70, 0.08);
+  display: block;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  min-height: 600px;
+  // transition-property: box-shadow, transform;
+  // will-change: box-shadow, transform;
+  width: calc(100% + 4rem);
+
+  @media screen and (max-width: $desktop) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 1.5rem;
+    width: 100%;
+  }
+}
+
+.pane--lottery__name {
+  margin-top: 0;
+}
+
+.pane--lottery__status {
+  // margin-top: 0rem;
+}
+
+.pane--lottery__time-remaining {
+  margin-top: 2rem;
+}
+
+.pane--lottery__time-remaining-value {
+  background: linear-gradient(84deg, #fc6f04 0%, #a303f0);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
